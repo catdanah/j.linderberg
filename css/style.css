@@ -1,32 +1,5 @@
 @charset "utf-8";
 
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-ul li {
-  list-style: none;
-}
-a {
-  display: block;
-  color: #333;
-  text-decoration: none;
-}
-button {
-  border: 0;
-  outline: 0;
-  background-color: unset;
-}
-body {
-  background-color: #fff;
-}
-.clear {
-  clear: both;
-}
-
 @media screen and (max-width: 767px) {
   header {
     position: fixed;
@@ -36,10 +9,9 @@ body {
     z-index: 99;
   }
   header a.logo {
-    display: inline-block;
     margin: 10px 0 0 20px;
     color: #000;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 700;
     font-family: "Source Sans Pro", sans-serif;
   }
@@ -51,58 +23,60 @@ body {
     width: 100%;
     height: 100%;
     background-color: #fff;
-    z-index: 9;
+    z-index: 99;
     overflow-y: auto;
   }
-  header #top-menu {
+  header .top-menu,
+  header .bottom-menu {
     float: left;
     width: 100%;
     height: 50px;
-    background-color: #999;
   }
-  header #top-menu > a {
+  header .top-menu > li {
     float: left;
-    margin: 15px 0 0 50px;
-    font-size: 16px;
+    margin: 20px 0 0 50px;
   }
-  header #main-menu {
+  header .bottom-menu > li {
+    float: left;
+    margin: 0 0 20px 50px;
+  }
+  header .top-menu > li > a,
+  header .bottom-menu > li > a {
+    font-size: 14px;
+  }
+  header .main-menu {
     float: left;
     width: 100%;
     height: calc(100% - 100px);
+    padding-top: 20px;
   }
-  header #main-menu > li > a {
-    margin: 30px 0 0 50px;
+  header .main-menu > li {
+    margin: 25px 0 0 50px;
+  }
+  header .main-menu > li > a {
     font-size: 32px;
-    font-weight: bold;
+    font-weight: 700;
   }
   header .sub-menu > li > a {
-    margin: 30px 0 0 50px;
-    font-size: 26px;
+    margin: 20px 0 0 30px;
   }
-  header #bottom-menu {
-    float: left;
-    width: 100%;
-    height: 50px;
-    background-color: #999;
-  }
-  header #bottom-menu > a {
-    float: left;
-    margin: 15px 0 0 50px;
-    font-size: 16px;
+  header .sub-menu > li > a {
+    font-size: 22px;
+    font-weight: 600;
   }
   header a.trigger {
     position: absolute;
     right: 0;
     top: 0;
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
     margin: 16px 20px 0 0;
     z-index: 100;
   }
   header a.trigger span {
     display: block;
     position: relative;
-    width: 28px;
+    width: 26px;
     height: 2px;
     background-color: #333;
     transition: all 0.4s ease;
@@ -111,7 +85,7 @@ body {
   header a.trigger span::after {
     content: "";
     position: absolute;
-    width: 28px;
+    width: 26px;
     height: 2px;
     background-color: #333;
     transition: all 0.4s ease;
@@ -148,18 +122,16 @@ body {
     opacity: 1;
     visibility: visible;
   }
+
   /* main */
-  .main-con {
-    width: 100%;
-    height: 100%;
+  .banner-con {
     padding-top: 50px;
   }
-  .main-con > .swiper-container {
+  .banner-con .swiper-container {
     z-index: 9;
   }
-  .swiper-slide img {
+  .banner-con .swiper-slide img {
     width: 100%;
-    height: 100%;
   }
   /* collection */
   .collection-con {
@@ -169,13 +141,13 @@ body {
   .collection-con h2 {
     display: block;
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-size: 4.5vw;
     text-align: center;
   }
   .collection-con img {
     display: block;
-    width: 80%;
+    width: 90%;
     margin: 20px auto;
   }
   .collection-con button.direct {
@@ -197,26 +169,27 @@ body {
   .best-item-con h2 {
     display: block;
     width: 100%;
+    margin-bottom: 20px;
     font-size: 4.5vw;
     text-align: center;
   }
   .best-item-list {
-    width: 80%;
-    margin: 30px auto;
+    width: 90%;
+    margin: 0 auto;
   }
-  .best-item-list li {
+  .best-item-list > li {
     float: left;
     width: 48%;
     height: 50vw;
     margin: 20px 0;
   }
-  .best-item-list li:nth-child(2n) {
+  .best-item-list > li:nth-child(2n) {
     float: right;
   }
-  .best-item-list li a img {
+  .best-item-list > li > a > img {
     width: 100%;
   }
-  .best-item-list li span {
+  .best-item-list > li > span {
     display: block;
     width: 100%;
     margin: 10px 0;
@@ -231,11 +204,12 @@ body {
   .sale-con h2 {
     display: block;
     width: 100%;
+    margin-bottom: 20px;
     font-size: 4.5vw;
     text-align: center;
   }
-  .sale-con .swiper-container {
-    margin: 50px 0;
+  .sale-con .swiper-slide img {
+    width: 100%;
   }
   /* aside */
   aside {
@@ -245,42 +219,39 @@ body {
     font-size: 8vw;
     z-index: 1;
   }
-  aside a i {
-    color: #444;
-  }
   /* footer */
   footer {
     width: 100%;
-    height: 300px;
-    padding-top: 30px;
+    height: 200px;
+    margin-top: 50px;
+    padding-top: 20px;
     background-color: rgb(255, 252, 208);
   }
   footer p {
-    padding: 10px 0;
-    font-size: 2vw;
+    padding: 5px 0;
+    font-size: 12px;
     text-align: center;
   }
-  footer #sns-con {
+  footer .sns-con {
     width: 30%;
     margin: 20px auto;
   }
-  footer #sns-con li {
+  footer .sns-con li {
     float: left;
     width: 33.33%;
   }
-  footer #sns-con li a i {
+  footer .sns-con li a i {
     display: block;
-    font-size: 6vw;
+    font-size: 30px;
     text-align: center;
-    transition: all 0.2s ease;
   }
-  footer #sns-con li:nth-child(1) a i {
+  footer .sns-con li:nth-child(1) a i {
     color: #ff0000;
   }
-  footer #sns-con li:nth-child(2) a i {
+  footer .sns-con li:nth-child(2) a i {
     color: #1da1f2;
   }
-  footer #sns-con li:nth-child(3) a i {
+  footer .sns-con li:nth-child(3) a i {
     color: #8a3ab9;
   }
 }

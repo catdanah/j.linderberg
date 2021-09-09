@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;800;&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul li {
+  list-style: none;
+}
+a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+}
+button {
+  border: 0;
+  outline: 0;
+  background-color: unset;
+}
+body {
+  background-color: #fff;
+}
+.clear {
+  clear: both;
+}
