@@ -138,6 +138,9 @@
   .banner-con .swiper-slide img {
     width: 100%;
   }
+  .banner-con .swiper-pagination {
+    color:#fff;
+  }
   /* collection */
   .collection-con {
     width: 90%;
@@ -146,7 +149,7 @@
   .collection-con h2 {
     display: block;
     width: 100%;
-    font-size: 4.5vw;
+    font-size: 5vw;
     text-align: center;
   }
   .collection-list > li {
@@ -159,12 +162,23 @@
   .collection-list > li > span {
     display: block;
     width: 40%;
-    padding: 30% 5%;
+    padding: 5%;
   }
+  .collection-list > li > span>h3 {
+    padding-top:30%;
+    font-size: 4vw;
+
+  }
+  .collection-list > li > span>p {
+    padding-top:10%;
+    font-size: 2.5vw;
+  }
+
   .collection-list > li > span > a {
     position: relative;
-    height: 12vw;
-    font-size: 18vw;
+    height: 7.5vw;
+    margin-top: 15%;
+    font-size: 3vw;
     text-align: center;
     line-height: 7vw;
     transition: color 0.2s ease;
@@ -174,7 +188,7 @@
     right: 0;
     top: 0;
     content: "";
-    width: 45%;
+    width: 30%;
     height: 100%;
     background-color: salmon;
     border-radius: 40px;
@@ -204,7 +218,7 @@
   .best-item-con h2 {
     display: block;
     width: 100%;
-    font-size: 4.5vw;
+    font-size: 5vw;
     text-align: center;
   }
   .best-item-list {
@@ -222,8 +236,8 @@
   }
   .best-item-list > li > a {
     position: relative;
-    border: 1px solid #333;
-  }
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
   .best-item-list > li > a::before {
     opacity: 0;
     position: absolute;
@@ -268,7 +282,7 @@
   .best-item-con button.direct {
     width: calc(100% - 30vw);
     height: 40px;
-    margin-top: 20px;
+    margin-top:50px;
     font-size: 3vw;
     font-weight: 600;
     text-transform: uppercase;
@@ -283,18 +297,19 @@
   }
   /* sale */
   .sale-con {
-    width: 100%;
-    margin-top: 50px;
+    width: 90%;
+    margin: 50px 5% 0 5%;
   }
   .sale-con h2 {
     display: block;
     width: 100%;
-    font-size: 4.5vw;
+    font-size: 5vw;
     text-align: center;
   }
   .sale-con .swiper-container {
     margin-top: 20px;
   }
+
   .sale-con .swiper-slide img {
     width: 100%;
   }

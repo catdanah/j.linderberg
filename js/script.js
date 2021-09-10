@@ -12,19 +12,24 @@ $(document).ready(function() {
         }
     });
     // 슬라이더
-    const mySwiper = new Swiper('.swiper-container', {
+    const mySwiper = new Swiper('.banner-con .swiper-container', {
         loop : true,
         pagination : {
             el : '.swiper-pagination',
+            type : 'fraction',
         },
-        autoplay: { delay: 3000, },
+        autoplay: { 
+            delay: 3000, 
+        },
     });
     const saleSwiper = new Swiper('.sale-con .swiper-container', {
         loop : true,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+        autoplay: { 
+            delay: 3000, 
         },
-        autoplay: { delay: 3000, },
+        mousewheel : true,
+        slidesPerView: 1.5,
+        spaceBetween: 10,
+        centeredSlides: true,
     });
 });
