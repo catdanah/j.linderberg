@@ -3,6 +3,12 @@
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 }
 
+/* 
+베이스 컬러:  
+포인트 컬러: salmon
+
+*/
+
 /* 모바일 버전 */
 @media screen and (max-width: 767px) {
   header {
@@ -10,15 +16,16 @@
     width: 100%;
     height: 50px;
     background-color: #fff;
+    border-bottom: 1px solid #dadada;
     z-index: 99;
   }
   header a.logo {
-    display: inline-block;
-    margin: 10px 0 0 20px;
-    color: #000;
-    font-size: 24px;
-    font-weight: 700;
-    font-family: "Source Sans Pro", sans-serif;
+    width:150px;
+    margin:18px 0 0 20px;
+  }
+  header a.logo img {
+    width:100%;
+    height:100%;
   }
   /* 네비게이션 */
   header nav {
@@ -36,38 +43,45 @@
     float: left;
     width: 100%;
     height: 50px;
+    background: #f9f9f9;
   }
-  header .top-menu > li {
+  header .top-menu {
+    border-bottom: 1px solid #dadada;
+  }
+  header .bottom-menu {
+    border-top: 1px solid #dadada;
+  }
+  header .top-menu > li,
+  header .bottom-menu > li {
     float: left;
     margin: 20px 0 0 50px;
   }
-  header .bottom-menu > li {
-    float: left;
-    margin: 0 0 20px 50px;
-  }
   header .top-menu > li > a,
   header .bottom-menu > li > a {
-    font-size: 14px;
+    font-size: 12px;
   }
   header .main-menu {
     float: left;
     width: 100%;
     height: calc(100% - 100px);
-    padding-top: 20px;
   }
   header .main-menu > li {
-    margin: 25px 0 0 50px;
+    margin: 40px 0 0 50px;
   }
   header .main-menu > li > a {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 700;
   }
   header .sub-menu > li > a {
     margin: 20px 0 0 30px;
   }
   header .sub-menu > li > a {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 600;
+  }
+  /* hover */
+  header a:hover {
+    color:rgb(240, 6, 6);
   }
   header a.trigger {
     position: absolute;
@@ -149,7 +163,7 @@
   .collection-con h2 {
     display: block;
     width: 100%;
-    font-size: 5vw;
+    font-size: 8vw;
     text-align: center;
   }
   .collection-list > li {
@@ -165,19 +179,19 @@
     padding: 5%;
   }
   .collection-list > li > span>h3 {
-    padding-top:30%;
-    font-size: 4vw;
+    padding-top:10%;
+    font-size: 6vw;
 
   }
   .collection-list > li > span>p {
     padding-top:10%;
-    font-size: 2.5vw;
+    font-size: 4vw;
   }
 
   .collection-list > li > span > a {
     position: relative;
-    height: 7.5vw;
     margin-top: 15%;
+    font-family: 'Lato', sans-serif;
     font-size: 3vw;
     text-align: center;
     line-height: 7vw;
@@ -188,10 +202,10 @@
     right: 0;
     top: 0;
     content: "";
-    width: 30%;
+    width: 28%;
     height: 100%;
-    background-color: salmon;
-    border-radius: 40px;
+    background-color: rgb(255, 183, 88);
+    border-radius: 50px;
     transition: width 0.2s ease;
     z-index: -1;
   }
@@ -218,7 +232,7 @@
   .best-item-con h2 {
     display: block;
     width: 100%;
-    font-size: 5vw;
+    font-size: 8vw;
     text-align: center;
   }
   .best-item-list {
@@ -262,7 +276,7 @@
     width: 50%;
     height: 15%;
     padding-top: 5%;
-    font-size: 2.5vw;
+    font-size: 3vw;
     text-align: center;
     background-color: #fff;
     border: 1px solid #333;
@@ -276,15 +290,16 @@
     display: block;
     width: 100%;
     margin: 10px 0;
-    font-size: 3vw;
+    font-size: 4vw;
     text-align: center;
   }
   .best-item-con button.direct {
     width: calc(100% - 30vw);
     height: 40px;
     margin-top:50px;
-    font-size: 3vw;
-    font-weight: 600;
+    font-family: 'Lato', sans-serif;
+    font-size: 4vw;
+    font-weight: 700;
     text-transform: uppercase;
     margin-left: 15vw;
     border: 1px solid #999;
@@ -303,7 +318,7 @@
   .sale-con h2 {
     display: block;
     width: 100%;
-    font-size: 5vw;
+    font-size: 8vw;
     text-align: center;
   }
   .sale-con .swiper-container {

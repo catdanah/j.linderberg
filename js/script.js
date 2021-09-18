@@ -6,7 +6,7 @@ $(document).ready(function() {
         $('header a.trigger span').toggleClass('on');
         $('header nav').toggleClass('on');
         if ( $('header nav').hasClass('on') ) {
-            $('header nav').animate({right:'-15%'});                            
+            $('header nav').animate({right:'-35%'});                            
         } else {
             $('header nav').animate({right:'-100%'});
         }
