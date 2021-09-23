@@ -30,6 +30,7 @@ button {
   background-color: unset;
 }
 body {
+  min-width: 320px;
   color:#333;
   font-family: 'Gothic A1', sans-serif;
   background-color: #fff;
