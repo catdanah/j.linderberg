@@ -1,4 +1,11 @@
 $(document).ready(function() {
+    // 메뉴 슬라이드
+    $('header .main-menu>li').mouseenter(function() {
+        $(this).children('.sub-menu').slideDown(300);
+    });
+    $('header .main-menu>li').mouseleave(function() {
+        $(this).children('.sub-menu').slideUp(300);
+    });
     // 트리거 메뉴
     $('header a.trigger, header .nav-bg').click(function(e) {
         e.preventDefault();
