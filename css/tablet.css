@@ -162,6 +162,7 @@
   }
   .collection-list > li > img {
     width: 60%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
   .collection-list > li > span {
     display: block;
@@ -177,7 +178,15 @@
     font-size: 2rem;
   }
 
-  .collection-list > li > span > a {
+  .collection-list > li:first-child > img,
+  .collection-list > li:last-child > span {
+    float: left;
+  }
+  .collection-list > li:first-child > span,
+  .collection-list > li:last-child > img {
+    float: right;
+  }
+  .collection-list > li > span > a.arrow-btn {
     position: relative;
     width: 20rem;
     margin-top: 40px;
@@ -187,7 +196,7 @@
     line-height: 5rem;
     transition: color 0.2s ease;
   }
-  .collection-list > li > span > a::after {
+  .collection-list > li > span > a.arrow-btn::after {
     position: absolute;
     right: 0;
     top: 0;
@@ -199,19 +208,11 @@
     transition: width 0.2s ease;
     z-index: -1;
   }
-  .collection-list > li > span > a:hover {
+  .collection-list > li > span > a.arrow-btn:hover {
     color: #fff;
   }
-  .collection-list > li > span > a:hover::after {
+  .collection-list > li > span > a.arrow-btn:hover::after {
     width: 100%;
-  }
-  .collection-list > li:first-child > img,
-  .collection-list > li:last-child > span {
-    float: left;
-  }
-  .collection-list > li:first-child > span,
-  .collection-list > li:last-child > img {
-    float: right;
   }
 
   /* best item */

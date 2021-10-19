@@ -154,7 +154,6 @@
     display: block;
     width: 100%;
     font-size: 4rem;
-
     text-align: center;
   }
   .collection-list > li {
@@ -163,6 +162,7 @@
   }
   .collection-list > li > img {
     width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
   .collection-list > li > span {
     display: block;
@@ -176,8 +176,7 @@
     padding-top: 10px;
     font-size: 1.5rem;
   }
-
-  .collection-list > li > span > a {
+  .collection-list > li > span > a.arrow-btn {
     width: 14rem;
     margin-top: 20px;
     padding-left: 2rem;

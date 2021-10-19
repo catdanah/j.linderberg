@@ -18,7 +18,7 @@ $(document).ready(function() {
             $('header nav').animate({right:'-100%'});
         }
     });
-    // 슬라이더
+    // banner 슬라이더
     const mySwiper = new Swiper('.banner-con .swiper-container', {
         loop : true,
         pagination : {
@@ -29,6 +29,13 @@ $(document).ready(function() {
             delay: 3000, 
         },
     });
+    // collection 슬라이더
+    const collectionSwiper = new Swiper('.collection-list .swiper-container', {
+        loop : true,
+        slidesPerView : 'auto',
+        spaceBetween : 30, 
+    });
+    // sale 슬라이더
     const saleSwiper = new Swiper('.sale-con .swiper-container', {
         loop : true,
         autoplay: { 
