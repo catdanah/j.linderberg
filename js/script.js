@@ -32,6 +32,9 @@ $(document).ready(function() {
     // collection 슬라이더
     const collectionSwiper = new Swiper('.collection-list .swiper-container', {
         loop : true,
+        autoplay: { 
+            delay: 3000, 
+        },
         slidesPerView : 'auto',
         spaceBetween : 30, 
     });

@@ -201,16 +201,20 @@
     text-align: center;
   }
   .best-item-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     width: 100%;
+    margin-top: 20px;
   }
   .best-item-list > li {
-    float: left;
     width: 48%;
-    height: 52vw;
-    margin: 20px 0;
   }
-  .best-item-list > li:nth-child(2n) {
-    float: right;
+  .best-item-list > li:nth-child(5),
+  .best-item-list > li:nth-child(6),
+  .best-item-list > li:nth-child(7),
+  .best-item-list > li:nth-child(8) {
+    display: none;
   }
   .best-item-list > li > a {
     position: relative;
@@ -257,7 +261,7 @@
     font-size: 1.5rem;
     text-align: center;
   }
-  .best-item-con button.direct {
+  .best-item-con button.direct-btn {
     width: 100%;
     height: 40px;
     margin-top: 40px;
