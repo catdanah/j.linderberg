@@ -10,18 +10,27 @@
     border-bottom: 1px solid #dadada;
     z-index: 99;
   }
+  header .header-wrap {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1440px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  header .nav-bg {
+    display: none;
+  }
   header a.logo {
-    float: left;
     width: 150px;
     margin-top: 24px;
   }
   header a.logo img {
     width: 100%;
-    height: 100%;
   }
   /* 네비게이션 */
   header nav {
-    float: right;
+    display: flex;
     width: 750px;
     height: 100%;
     padding-top: 20px;
@@ -30,11 +39,11 @@
     float: left;
   }
   header nav .top-menu {
-    float: right;
-    width: 20%;
+    display: flex;
+    order: 1;
+    width: 30%;
   }
   header nav .top-menu > li {
-    float: left;
     width: 50%;
   }
   header nav .top-menu > li > a {
@@ -42,12 +51,11 @@
     text-align: right;
   }
   header nav .main-menu {
-    float: left;
-    width: 60%;
+    display: flex;
+    width: 70%;
     height: 100%;
   }
   header nav .main-menu > li {
-    float: left;
     width: 25%;
     height: 100%;
   }
@@ -70,6 +78,9 @@
     text-align: center;
   }
   header nav .bottom-menu {
+    display: none;
+  }
+  header a.trigger {
     display: none;
   }
 
@@ -99,47 +110,40 @@
     font-size: 5rem;
     text-align: center;
   }
-  .collection-list > li {
+  .collection-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     width: 100%;
-    margin: 60px 0;
+  }
+  .collection-list > li {
+    width: 48%;
+  }
+  .collection-list:nth-child(2) > li:first-child {
+    order: 2;
   }
   .collection-list > li > img {
-    width: 50%;
+    width: 100%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
-  .collection-list > li > span {
-    display: block;
-    width: 50%;
-    height: 40%;
-    padding-left: 60px;
-  }
-  .collection-list > li > span > h3 {
+  .collection-list > li > h3 {
     padding-top: 5%;
     font-size: 3.8rem;
   }
-  .collection-list > li > span > p {
+  .collection-list > li > p {
     padding-top: 5%;
     font-size: 2rem;
   }
-  .collection-list > li:first-child > img,
-  .collection-list > li:last-child > span {
-    float: left;
-  }
-  .collection-list > li:first-child > span,
-  .collection-list > li:last-child > img {
-    float: right;
-  }
-  .collection-list > li > span > a.arrow-btn {
+  .collection-list > li > a.arrow-btn {
     position: relative;
     width: 20rem;
-    margin-top: 10%;
     font-family: "Lato", sans-serif;
     text-align: center;
     font-size: 2rem;
     line-height: 5rem;
     transition: color 0.2s ease;
   }
-  .collection-list > li > span > a.arrow-btn::after {
+  .collection-list > li > a.arrow-btn::after {
     position: absolute;
     right: 0;
     top: 0;
@@ -151,19 +155,16 @@
     transition: width 0.2s ease;
     z-index: -1;
   }
-  .collection-list > li > span > a.arrow-btn:hover {
+  .collection-list > li > a.arrow-btn:hover {
     color: #fff;
   }
-  .collection-list > li > span > a.arrow-btn:hover::after {
+  .collection-list > li > a.arrow-btn:hover::after {
     width: 100%;
   }
   .collection-list .swiper-container {
-    float: right;
-    width: calc(50% - 60px);
-    height: 60%;
-    padding-top: 60px;
+    width: 100%;
+    padding-bottom: 10%;
   }
-
   .collection-list .swiper-slide {
     width: 30%;
     height: 100%;
@@ -180,6 +181,7 @@
     margin: 80px 0;
     background: #fff url("../imgs/attach-img.jpg") no-repeat;
     background-size: cover;
+    background-position: center;
     background-attachment: fixed;
   }
 

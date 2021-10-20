@@ -28,6 +28,19 @@ $(document).ready(function() {
         autoplay: { 
             delay: 3000, 
         },
+        breakpoints: { 
+            768: {
+                spaceBetween : 50,
+                slidesPerView: 1.5,
+                centeredSlides: true, 
+
+            },
+            1024: {
+                spaceBetween : 50,
+                slidesPerView: 2,
+                centeredSlides: true, 
+            },
+        },
     });
     // collection 슬라이더
     const collectionSwiper = new Swiper('.collection-list .swiper-container', {
