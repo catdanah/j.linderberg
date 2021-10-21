@@ -19,7 +19,7 @@ $(document).ready(function() {
         }
     });
     // banner 슬라이더
-    const mySwiper = new Swiper('.banner-con .swiper-container', {
+    const bannerImgSwiper = new Swiper('.banner-con .swiper-container.banner-img', {
         loop : true,
         pagination : {
             el : '.swiper-pagination',
@@ -27,6 +27,7 @@ $(document).ready(function() {
         },
         autoplay: { 
             delay: 3000, 
+            disableOnInteraction : false,
         },
         breakpoints: { 
             768: {
@@ -42,24 +43,41 @@ $(document).ready(function() {
             },
         },
     });
+    const bannerContentSwiper = new Swiper('.banner-con .swiper-container.banner-content', {
+        loop : true,
+        effect : 'fade',
+        fadeEffect: { 
+            crossFade: true 
+        },
+        autoplay: { 
+            delay: 3000, 
+            disableOnInteraction : false,
+        },
+        breakpoints: { 
+            768: {
+                spaceBetween : 50,
+                slidesPerView: 1,
+            },
+            1024: {
+                spaceBetween : 100,
+                slidesPerView: 1,
+            },
+        },
+    });
     // collection 슬라이더
     const collectionSwiper = new Swiper('.collection-list .swiper-container', {
         loop : true,
         autoplay: { 
             delay: 3000, 
+            disableOnInteraction : false,
         },
-        slidesPerView : 'auto',
+        slidesPerView : 3.5,
         spaceBetween : 30, 
     });
-    // sale 슬라이더
-    const saleSwiper = new Swiper('.sale-con .swiper-container', {
-        loop : true,
-        autoplay: { 
-            delay: 3000, 
-        },
-        mousewheel : true,
-        slidesPerView: 1.5,
-        spaceBetween: 10,
-        centeredSlides: true,
+
+    // qeustion 아코디언 메뉴
+    $('.question-list > .question').click(function() {
+        $(this).next('.answer').slideToggle(300);
+        $(this).next('.answer').siblings('.answer').slideUp(300);
     });
 });

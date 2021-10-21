@@ -1,12 +1,11 @@
 @charset "utf-8";
 
 /* 영문 폰트 */
-/* font-family: 'Lato', sans-serif; */
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
-
+/* font-family: "Frank Ruhl Libre", serif; */
+@import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700&display=swap");
 /* 한글 폰트 */
-/* font-family: 'Gothic A1', sans-serif; */
-@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;600;700&display=swap");
+/* font-family: 'Noto Serif KR', serif; */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&display=swap");
 
 * {
   margin: 0;
@@ -32,13 +31,13 @@ button {
 body {
   min-width: 320px;
   color: #333;
-  font-family: "Gothic A1", sans-serif;
+  font-family: "Noto Serif KR", serif;
   background-color: #fff;
 }
 h2,
 h3,
 h4 {
-  font-family: "Lato", sans-serif;
+  font-family: "Frank Ruhl Libre", serif;
 }
 .clear {
   clear: both;
