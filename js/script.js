@@ -35,13 +35,13 @@ $(document).ready(function() {
         },
         breakpoints: { 
             768: {
-                spaceBetween : 50,
+                spaceBetween : 30,
                 slidesPerView: 1.5,
                 centeredSlides: true, 
 
             },
             1024: {
-                spaceBetween : 50,
+                spaceBetween : 30,
                 slidesPerView: 2,
                 centeredSlides: true, 
             },
@@ -75,7 +75,7 @@ $(document).ready(function() {
             delay: 3000, 
             disableOnInteraction : false,
         },
-        slidesPerView : 3.5,
+        slidesPerView : 2.6,
         spaceBetween : 30, 
     });
 
