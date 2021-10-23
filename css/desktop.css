@@ -23,7 +23,7 @@
   }
   header a.logo {
     width: 150px;
-    margin-top: 24px;
+    margin: 24px 70px 0 0;
   }
   header a.logo img {
     width: 100%;
@@ -35,27 +35,30 @@
     height: 100%;
     padding-top: 15px;
   }
-  header nav ul {
+  header ul {
     float: left;
   }
-  header nav .top-menu {
+  header .top-menu {
     display: flex;
     order: 1;
     width: 30%;
     height: 100%;
     padding-top: 3px;
   }
-  header nav .top-menu > li {
+  header .top-menu > li {
     width: 50%;
     height: 100%;
   }
-  header nav .top-menu > li > a {
+  header .top-menu > li > a {
     height: 100%;
     font-size: 1.4rem;
     text-align: right;
+    transition: color 0.2s ease;
   }
-
-  header nav .main-menu {
+  header .top-menu > li > a:hover {
+    color: #ff8d00;
+  }
+  header .main-menu {
     display: flex;
     width: 70%;
     height: 100%;
@@ -64,48 +67,54 @@
     width: 25%;
     height: 100%;
   }
-  header nav .main-menu > li > a {
+  header .main-menu > li > a {
     position: relative;
     height: 100%;
     font-size: 1.8rem;
+    font-weight: 700;
     text-align: center;
+    transition: color 0.2s ease;
   }
-  header nav .main-menu > li > a::after {
+  header .main-menu > li > a:hover {
+    color: #ff8d00;
+  }
+  header .main-menu > li > a::after {
     position: absolute;
     left: 50%;
     bottom: 10px;
     content: "";
     width: 0;
     height: 2px;
-    background: #333;
+    background: #ff8d00;
     transition: width 0.4s ease;
     transform: translateX(-50%);
   }
-  header nav .main-menu > li > a:hover::after {
+  header .main-menu > li > a:hover::after {
     width: 50%;
   }
-  header nav .sub-menu {
+  header .sub-menu {
     display: none;
     width: 100%;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+      rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   }
-  header nav .sub-menu > li {
+  header .sub-menu > li {
     width: 100%;
     height: 50px;
     background-color: #fff;
   }
-  header nav .sub-menu > li > a {
+  header .sub-menu > li > a {
     height: 100%;
     padding-top: 12px;
     font-size: 1.6rem;
     text-align: center;
     transition: color, background-color 0.1s ease;
   }
-  header nav .sub-menu > li > a:hover {
+  header .sub-menu > li > a:hover {
     color: #fff;
-    background-color: #333;
+    background-color: #ff8d00;
   }
-  header nav .bottom-menu {
+  header .bottom-menu {
     display: none;
   }
   header a.trigger {
@@ -201,7 +210,7 @@
     content: "";
     width: 28%;
     height: 100%;
-    background-color: rgb(255, 183, 88);
+    background-color: rgb(255, 141, 0, 0.7);
     border-radius: 50px;
     transition: width 0.2s ease;
     z-index: -1;
@@ -316,7 +325,7 @@
   }
   .best-item-con button.direct-btn:hover {
     color: #fff;
-    background-color: rgb(255, 183, 88);
+    background-color: rgb(255, 141, 0, 0.7);
     border: none;
   }
 
@@ -367,7 +376,7 @@
     display: none;
     padding: 20px 20px 20px 0;
     font-size: 1.6rem;
-    background: #f2f2f2;
+    background: #f0f0f0;
     cursor: pointer;
   }
 
@@ -385,7 +394,7 @@
     height: 300px;
     margin-top: 80px;
     padding-top: 60px;
-    background-color: rgb(255, 252, 208);
+    background: #f0f0f0;
   }
   footer p {
     padding: 5px 20px;
